@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order form</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
@@ -24,31 +25,43 @@
             </a>
         </nav>
     </header>
-    <main>
+    <main class="order">
         <h2>Order form</h2>
         <form action="/order-confirmation.html" method="POST">
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name" required>
+            <label for="firstname">First name</label>
+            <br>
+            <input type="text" name="firstname" id="firstname" required>
+            <br>
+            <label for="lastname">Last name</label>
+            <br>
+            <input type="text" name="lastname" id="lastname" required>
             <br>
             <label for="email">Email</label>
-            <input type="email" name="email" id="email" required>
+            <br>
+            <input type="email" name="email" id="email" inputmode="email" required>
             <br>
             <label for="address">Address</label>
+            <br>
             <input type="text" name="address" id="address" required>
             <br>
             <label for="city">City</label>
+            <br>
             <input type="text" name="city" id="city" required>
             <br>
             <label for="country">Country</label>
+            <br>
             <input type="text" name="country" id="country" required>
             <br>
             <label for="postalCode">Postal code</label>
+            <br>
             <input type="text" name="postalCode" id="postalCode" required>
             <br>
             <label for="phone">Phone</label>
-            <input type="tel" name="phone" id="phone" required>
+            <br>
+            <input type="tel" name="phone" id="phone" inputmode="tel" required>
             <br>
             <label for="payment">Payment method</label>
+            <br>
             <select name="payment" id="payment" required>
                 <option value="afterpay">Afterpay</option>
                 <option value="ideal">iDEAL</option>
@@ -56,9 +69,9 @@
                 <option value="paypal">PayPal</option>
             </select>
             <br>
+            <br>
             <button type="submit">Order</button>
         </form>
-        <a href="/order-confirmation.html">Order</a>
     </main>
 </body>
 </html>

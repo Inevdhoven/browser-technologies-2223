@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Design your own t-shirt</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
@@ -24,17 +25,93 @@
             </a>
         </nav>
     </header>
-    <main>
+    <main class="design">
+        <a href="/choose-size.html">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <polyline points="15 6 9 12 15 18" />
+        </svg>
+        Go back
+        </a>
+        <h2>Design your t-shirts</h2>
         <section>
-            <a href="/choose-size.html">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                <polyline points="15 6 9 12 15 18" />
-            </svg>
-            Go back
-            </a>
-            <h2>Design your t-shirts</h2>
-            <a href="/winkelwagen.html">Add to shopping cart</a>
+            <nav>
+                <ul>
+                    <li>
+                        <label for="addimage">
+                            Add an image
+                            <input type="radio" id="addimage" name="addthings">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <line x1="15" y1="8" x2="15.01" y2="8" />
+                                <rect x="4" y="4" width="16" height="16" rx="3" />
+                                <path d="M4 15l4 -4a3 5 0 0 1 3 0l5 5" />
+                                <path d="M14 14l1 -1a3 5 0 0 1 3 0l2 2" />
+                            </svg>
+                        </label>
+    
+                        <label for="image">
+                            <span>Add an image (format: png):</span>
+                            <span>Upload an image</span>
+                            <input type="file" id="image" name="image" accept="image/png">
+                        </label>
+                    </li>
+                    <li>
+                        <label for="addtext">
+                            Add text
+                            <input type="radio" id="addtext" name="addthings">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-text-resize" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <circle cx="5" cy="5" r="2" />
+                                <circle cx="19" cy="5" r="2" />
+                                <circle cx="5" cy="19" r="2" />
+                                <circle cx="19" cy="19" r="2" />
+                                <path d="M5 7v10" />
+                                <path d="M7 5h10" />
+                                <path d="M7 19h10" />
+                                <path d="M19 7v10" />
+                                <path d="M10 10h4" />
+                                <path d="M12 14v-4" />
+                            </svg>
+                        </label>
+                        <label for="text">
+                            <span>Add text:</span>
+                            <input type="text" id="text" name="text">
+                            <button type="submit">Add text</button>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="addcolor">
+                            Add color
+                            <input type="radio" id="addcolor" name="addthings">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-palette" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M12 21a9 9 0 1 1 0 -18a9 8 0 0 1 9 8a4.5 4 0 0 1 -4.5 4h-2.5a2 2 0 0 0 -1 3.75a1.3 1.3 0 0 1 -1 2.25" />
+                                <circle cx="7.5" cy="10.5" r=".5" fill="currentColor" />
+                                <circle cx="12" cy="7.5" r=".5" fill="currentColor" />
+                                <circle cx="16.5" cy="10.5" r=".5" fill="currentColor" />
+                            </svg>
+                        </label>
+                        <label for="color">
+                            <span>Choose a color for the t-shirt:</span>
+                            <input type="color" id="color" name="color">
+                        </label>
+                    </li>
+                    <li>
+                        <a href="/winkelwagen.html">
+                            Add to shopping cart
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart-plus" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <circle cx="6" cy="19" r="2" />
+                                <circle cx="17" cy="19" r="2" />
+                                <path d="M17 17h-11v-14h-2" />
+                                <path d="M6 5l6.005 .429m7.138 6.573l-.143 .998h-13" />
+                                <path d="M15 6h6m-3 -3v6" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </section>
         <picture>
             <source media="(max-width: 500px)" srcset="images/white-tshirt-320.png" />
@@ -43,55 +120,5 @@
             <img src="images/white-tshirt.png" alt="the t-shirt you are designing" />
         </picture>
     </main>
-    <footer>
-        <nav>
-            <ul>
-                <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                        <line x1="15" y1="8" x2="15.01" y2="8" />
-                        <rect x="4" y="4" width="16" height="16" rx="3" />
-                        <path d="M4 15l4 -4a3 5 0 0 1 3 0l5 5" />
-                        <path d="M14 14l1 -1a3 5 0 0 1 3 0l2 2" />
-                    </svg>
-
-                    <label for="image">Add an image (format: png):
-                        <input type="file" id="image" name="image" accept="image/png">
-                    </label>
-                </li>
-                <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-text-resize" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                        <circle cx="5" cy="5" r="2" />
-                        <circle cx="19" cy="5" r="2" />
-                        <circle cx="5" cy="19" r="2" />
-                        <circle cx="19" cy="19" r="2" />
-                        <path d="M5 7v10" />
-                        <path d="M7 5h10" />
-                        <path d="M7 19h10" />
-                        <path d="M19 7v10" />
-                        <path d="M10 10h4" />
-                        <path d="M12 14v-4" />
-                    </svg>
-                    <label for="text">Add text:
-                        <input type="text" id="text" name="text">
-                    </label>
-                    <button type="submit">Add text</button>
-                </li>
-                <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-palette" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                        <path d="M12 21a9 9 0 1 1 0 -18a9 8 0 0 1 9 8a4.5 4 0 0 1 -4.5 4h-2.5a2 2 0 0 0 -1 3.75a1.3 1.3 0 0 1 -1 2.25" />
-                        <circle cx="7.5" cy="10.5" r=".5" fill="currentColor" />
-                        <circle cx="12" cy="7.5" r=".5" fill="currentColor" />
-                        <circle cx="16.5" cy="10.5" r=".5" fill="currentColor" />
-                    </svg>
-                    <label for="color">Choose a color for the text:
-                        <input type="color" id="color" name="color">
-                    </label>
-                </li>
-            </ul>
-        </nav>
-    </footer>
 </body>
 </html>
