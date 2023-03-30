@@ -1,0 +1,548 @@
+@font-face {
+    font-family: 'Mulish-Regular';
+    font-weight: 400;
+    src: url("../fonts/mulish-regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Mulish-Medium';
+    font-weight: 500;
+    src: url("../fonts/mulish-medium.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Mulish-Bold';
+    font-weight: 700;
+    src: url("../fonts/mulish-bold.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Mulish-Black';
+    font-weight: 900;
+    src: url("../fonts/mulish-black.woff") format("woff");
+}
+
+:root {
+    --white: #fff;
+
+    --orange: #ef7b45;
+    --light-blue: #6FFFE9;
+    --blue: #5BC0BE;
+    --dark-blue: #1C2541;
+}
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    
+    background-color: var(--dark-blue);
+
+    font-family: 'Mulish-Regular', sans-serif;
+    font-weight: 400;
+    color: var(--white);
+}
+
+br {
+    display: none;
+}
+
+main {
+    padding: 0 1rem 5rem;
+}
+
+h2 {
+    margin-top: 2.5rem;
+
+    font-family: 'Mulish-Black', sans-serif;
+    font-weight: 900;
+    font-size: 1.8rem;
+    color: var(--light-blue);
+
+    text-align: center;
+}
+
+p {
+    font-family: 'Mulish-Regular', sans-serif;
+    font-weight: 400;
+}
+
+a:not(header a),
+.design ul li label:last-of-type button,
+.design ul li label:last-of-type span:nth-of-type(2),
+.order button {
+    padding: 0.5rem 0.8rem;
+    border: none;
+    border-radius: 0.5rem;
+
+    background-color: var(--orange);
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: var(--white);
+
+    transition: background-color 250ms ease;
+    cursor: pointer;
+}
+
+a:not(header a):hover,
+.design ul li label:last-of-type button:hover,
+.design ul li label:last-of-type span:nth-of-type(2):hover,
+.order button:hover {
+    background-color: hsl(19, 84%, 50%);
+    cursor: pointer;
+}
+
+
+
+
+/* Hearder */
+header nav {
+    padding: 0.5rem 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header a h1 {
+    margin: 0;
+
+    font-family: 'Mulish-Black', sans-serif;
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+header nav a:last-of-type {
+    font-size: 0;
+}
+
+header nav a svg {
+    width: 2rem;
+    height: 2rem;
+
+    display: block;
+
+    stroke: var(--white);
+}
+
+
+
+/* Home */
+main section {
+    height: 80dvh;
+    display: grid;
+    place-items: center;
+}
+
+main section h2 {
+    max-width: 11em;
+    margin: 1rem 0;
+
+    font-family: 'Mulish-Black', sans-serif;
+    font-weight: 900;
+    font-size: 2rem;
+    color: var(--light-blue);
+
+    text-transform: uppercase;
+    text-align: center;
+}
+
+main section svg {
+    width: 100%;
+    height: 15em;
+
+    stroke: var(--white);
+}
+
+main section a {
+    font-family: 'Mulish-Medium', sans-serif;
+    font-weight: 700;
+}
+
+
+
+/* Overview */
+.overview ul {
+    padding: 0;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+
+    list-style-type: none;
+}
+
+@media only screen and (min-width: 768px) {
+    .overview ul {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .overview ul {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+.overview li {
+    height: 10em;
+    border: 0.2rem solid var(--light-blue);
+    border-radius: 1rem;
+}
+
+.overview li a {
+    height: 100%;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    justify-content: center;
+
+    font-size: 0;
+    color: var(--white);
+
+    background: transparent;
+}
+
+.overview li a:hover {
+    background: transparent;
+}
+
+.overview li a svg {
+    stroke: var(--white)
+}
+
+.overview section {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* Choose-size */
+.choose-size a,
+.design a {
+    padding-right: 1.3rem;
+    margin-top: 1rem;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.choose-size a svg,
+.design a svg {
+    width: 1.5rem;
+    height: 1.5rem;
+
+    stroke: var(--white);
+}
+
+.choose-size section,
+.design section {
+    height: auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.choose-size section h3 {
+    width: 100%;
+    margin: 1rem 0;
+
+    font-family: 'Mulish-Bold', sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+.choose-size section h3:first-of-type {
+    margin: 0 0 1rem;
+}
+
+.choose-size section input {
+    appearance: none;
+    position: absolute;
+}
+
+.choose-size section input:checked + label {
+    border-radius: 0.5rem;
+    background-color: var(--orange);
+}
+
+.choose-size section label {
+    padding: 0.5rem 0.8rem;
+}
+
+.choose-size section p {
+    width: 100%;
+}
+
+
+
+/* Design */
+.design nav {
+    width: calc(100% - 2rem);
+    height: 4rem;
+    border-radius: 0.5rem;
+
+    position: fixed;
+    left: 1rem;
+    bottom: 1rem;
+
+    background-color: var(--light-blue);
+}
+
+.design nav ul {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    list-style-type: none;
+}
+
+.design nav ul li {
+    display: flex;
+    justify-content: center;
+}
+
+.design nav ul li > *,
+.design nav ul li label > * {
+    cursor: pointer;
+}
+
+.design ul li label:first-of-type {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+}
+
+.design ul li label:nth-of-type(2) {
+    display: none;
+}
+
+.design ul li label:first-of-type input {
+    appearance: none;
+    position: absolute;
+    inset: 0;
+}
+
+.design ul li:last-of-type a,
+.design ul li label {
+    font-size: 0;
+    background: transparent;
+}
+
+.design ul li:has(label:first-of-type input:checked) {
+    border-radius: 0.5rem;
+    background-color: var(--orange);
+}
+
+.design ul li:has(label:first-of-type input:checked) label:last-of-type {
+    width: 100%;
+    padding: 1.5rem 0 2rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+
+    display: block;
+
+    position: absolute;
+    bottom: 3.625em;
+    left: 0;
+    z-index: -1;
+
+    background-color: var(--light-blue);
+
+    font-size: 1rem;
+}
+
+.design ul li:has(label:first-of-type input:checked) label:last-of-type span:first-of-type {
+    padding: 0 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: var(--dark-blue);
+}
+
+.design ul li:first-of-type label:last-of-type span:first-of-type {
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.design ul li:first-of-type label:last-of-type span:nth-of-type(2) {
+    display: inline-block;
+    margin: 0.5rem 0 0 1rem;
+}
+
+.design ul li:has(label:first-of-type input:checked) label:last-of-type input {
+    padding: 0 1rem;
+
+    color: var(--dark-blue);
+}
+
+#color {
+    padding: 0 0.2em;
+}
+
+#text {
+    padding: 0.5em;
+    border: none;
+    border-radius: 0.3rem;
+}
+
+.design ul li:first-of-type label:last-of-type input {
+    display: none;
+} 
+
+.design ul li svg {
+    width: 2rem;
+    height: 2rem;
+
+    display: block;
+
+    stroke: var(--dark-blue);
+}
+
+.design nav ul li:last-of-type a {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* Shopping cart */
+.shoppingcart table thead tr th {
+    width: 35%;
+    padding-right: 0.5rem;
+
+    font-family: 'Mulish-bold';
+    font-weight: 700;
+    text-align: left;
+}
+
+.shoppingcart table tbody tr td {
+    padding-right: 0.5rem;
+}
+
+.shoppingcart table tbody tr td:last-of-type {
+    text-align: center;
+}
+
+.shoppingcart table tbody tr td:first-of-type img {
+    width: 4rem;
+} 
+
+.shoppingcart table tbody tr td span {
+    display: block;
+}
+
+.shoppingcart table tbody tr td span:last-of-type {
+    font-family: 'Mulish-bold';
+    font-weight: 700;
+    color: var(--orange);
+}
+
+.shoppingcart table tbody button {
+    padding: 0.5rem 0.5rem;
+    border: none;
+    border-radius: 0.3rem;
+
+    font-size: 0;
+
+    background: var(--white);
+}
+
+.shoppingcart table tbody button svg {
+    width: 1.5rem;
+    height: 1.5rem;
+
+    stroke: red;
+}
+
+.shoppingcart table + p {
+    margin: 1rem 0;
+}
+
+.shoppingcart table + p span {
+    font-family: 'Mulish-bold';
+    font-weight: 700;
+    color: var(--light-blue);
+}
+
+.shoppingcart p + a {
+    margin: 1rem 0 0.5rem;
+
+    display: inline-block;
+}
+
+
+/* Order */
+.order form {
+    max-width: 18.75rem;
+    width: 100%;
+    margin: 0 auto;
+
+    display: grid; 
+}
+
+.order form label {
+    margin: 0.8em 0 0.5em
+}
+
+.order form label:first-of-type {
+    margin: 0.5em 0;
+}
+
+.order form input,
+.order form select {
+    padding: 0.5em;
+    border: none;
+    border-radius: 0.3rem;
+
+    font-family: 'Mulish-Regular', sans-serif;
+    font-weight: 400;
+}
+
+.order form select {
+    margin: 0 0 1.5em;
+}
+
+.order form button {
+    margin-top: 1rem;
+    padding: 0.8rem;
+}
+
+
+/* Confirmation */
+.confirmation section {
+    grid-template-rows: repeat(3, min-content);
+    place-items: flex-start;
+}
+
+.confirmation h2 {
+    text-align: left;
+}
+
+.confirmation section a {
+    margin-top: 1rem;
+}
+
+
+
+/* Support */
+@supports not (appearance: none) {
+    .design ul li input,
+    .choose-size section input {
+        opacity: 0;
+    }
+}
