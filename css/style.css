@@ -49,15 +49,15 @@ br {
 }
 
 main {
-    padding: 0 16px 80px;
+    padding: 0 1rem 5rem;
 }
 
 h2 {
-    margin-top: 40px;
+    margin-top: 2.5rem;
 
     font-family: 'Mulish-Black', sans-serif;
     font-weight: 900;
-    font-size: 28.8px;
+    font-size: 1.8rem;
     color: var(--light-blue);
 
     text-align: center;
@@ -72,9 +72,9 @@ a:not(header a),
 .design ul li label:last-of-type button,
 .design ul li label:last-of-type span:nth-of-type(2),
 .order button {
-    padding: 8px 12.8px;
+    padding: .5rem .8rem;
     border: none;
-    border-radius: 8px;
+    border-radius: .5rem;
 
     background-color: var(--orange);
     text-decoration: none;
@@ -98,7 +98,7 @@ a:not(header a):hover,
 
 /* Hearder */
 header nav {
-    padding: 8px 16px;
+    padding: .5rem 1rem;
 
     display: flex;
     align-items: center;
@@ -114,7 +114,7 @@ header a h1 {
 
     font-family: 'Mulish-Black', sans-serif;
     font-weight: 900;
-    font-size: 24px;
+    font-size: 1.5rem;
     color: var(--white);
 }
 
@@ -123,8 +123,8 @@ header nav a:last-of-type {
 }
 
 header nav a svg {
-    width: 32px;
-    height: 32px;
+    width: 2rem;
+    height: 2rem;
 
     display: block;
 
@@ -142,11 +142,11 @@ main section {
 
 main section h2 {
     max-width: 11em;
-    margin: 16px 0;
+    margin: 1rem 0;
 
     font-family: 'Mulish-Black', sans-serif;
     font-weight: 900;
-    font-size: 32px;
+    font-size: 2rem;
     color: var(--light-blue);
 
     text-transform: uppercase;
@@ -177,27 +177,32 @@ main section a {
 
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 16px;
+    gap: 1rem;
 
     list-style-type: none;
 }
 
-@media only screen and (min-width: 48rem) {
+@media only screen and (min-width: 768px) {
     .overview ul {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
-@media only screen and (min-width: 64rem) {
+@media only screen and (min-width: 1024px) {
     .overview ul {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
 
 .overview li {
-    height: 10em;
-    border: 3.2px solid var(--light-blue);
-    border-radius: 16px;
+    min-height: 10em;
+    height: auto; 
+    border: .2rem solid var(--light-blue);
+    border-radius: 1rem;
+}
+
+.overview li:first-of-type svg {
+    width: 40%;
 }
 
 .overview li a {
@@ -209,6 +214,8 @@ main section a {
     place-items: center;
     justify-content: center;
 
+    position: relative;
+
     font-size: 0;
     color: var(--white);
 
@@ -219,8 +226,44 @@ main section a {
     background: transparent;
 }
 
-.overview li a svg {
-    stroke: var(--white)
+.overview div {
+    width: 100%;
+    height: 70%;
+    position: relative;
+    top: -1.25rem;
+}
+
+.overview li div svg {
+    width: 100%;
+    height: auto;
+}
+
+.overview li div p {
+    margin: 0;
+
+    display: block;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 8px;
+}
+
+.overview li div img {
+    width: 32px;
+
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.overview li p {
+    margin: 0;
+    font-size: 11.2px;
+    display: inline-block;
 }
 
 .overview section {
@@ -228,23 +271,27 @@ main section a {
     flex-direction: column;
 }
 
+.overview .hide {
+    display: none;
+}
+
 
 
 /* Choose-size */
 .choose-size a,
 .design a {
-    padding-right: 20.8px;
-    margin-top: 16px;
+    padding-right: 1.3rem;
+    margin-top: 1rem;
 
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: .5rem;
 }
 
 .choose-size a svg,
 .design a svg {
-    width: 24px;
-    height: 24px;
+    width: 1.5rem;
+    height: 1.5rem;
 
     stroke: var(--white);
 }
@@ -255,20 +302,20 @@ main section a {
 
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: .5rem;
 }
 
 .choose-size section h3 {
     width: 100%;
-    margin: 16px 0;
+    margin: 1rem 0;
 
     font-family: 'Mulish-Bold', sans-serif;
     font-weight: 700;
-    font-size: 22.4px;
+    font-size: 1.4rem;
 }
 
 .choose-size section h3:first-of-type {
-    margin: 0 0 16px;
+    margin: 0 0 1rem;
 }
 
 .choose-size section input {
@@ -277,12 +324,12 @@ main section a {
 }
 
 .choose-size section input:checked + label {
-    border-radius: 8px;
+    border-radius: .5rem;
     background-color: var(--orange);
 }
 
 .choose-size section label {
-    padding: 8px 12.8px;
+    padding: .5rem .8rem;
 }
 
 .choose-size section p {
@@ -293,13 +340,13 @@ main section a {
 
 /* Design */
 .design nav {
-    width: calc(100% - 32px);
-    height: 64px;
-    border-radius: 8px;
+    width: calc(100% - 2rem);
+    height: 4rem;
+    border-radius: .5rem;
 
     position: fixed;
-    left: 16px;
-    bottom: 16px;
+    left: 1rem;
+    bottom: 1rem;
 
     background-color: var(--light-blue);
 }
@@ -351,14 +398,14 @@ main section a {
 }
 
 .design ul li:has(label:first-of-type input:checked) {
-    border-radius: 8px;
+    border-radius: .5rem;
     background-color: var(--orange);
 }
 
 .design ul li:has(label:first-of-type input:checked) label:last-of-type {
     width: 100%;
-    padding: 24px 0 32px;
-    border-radius: 8px 8px 0 0;
+    padding: 1.5rem 0 2rem;
+    border-radius: .5rem .5rem 0 0;
 
     display: block;
 
@@ -369,28 +416,28 @@ main section a {
 
     background-color: var(--light-blue);
 
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .design ul li:has(label:first-of-type input:checked) label:last-of-type span:first-of-type {
-    padding: 0 16px;
-    margin-bottom: 8px;
-    font-size: 16px;
+    padding: 0 1rem;
+    margin-bottom: .5rem;
+    font-size: 1rem;
     color: var(--dark-blue);
 }
 
 .design ul li:first-of-type label:last-of-type span:first-of-type {
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
     display: block;
 }
 
 .design ul li:first-of-type label:last-of-type span:nth-of-type(2) {
     display: inline-block;
-    margin: 8px 0 0 16px;
+    margin: .5rem 0 0 1rem;
 }
 
 .design ul li:has(label:first-of-type input:checked) label:last-of-type input {
-    padding: 0 16px;
+    padding: 0 1rem;
 
     color: var(--dark-blue);
 }
@@ -402,7 +449,7 @@ main section a {
 #text {
     padding: 0.5em;
     border: none;
-    border-radius: 4.8px;
+    border-radius: .3rem;
 }
 
 .design ul li:first-of-type label:last-of-type input {
@@ -410,8 +457,8 @@ main section a {
 } 
 
 .design ul li svg {
-    width: 32px;
-    height: 32px;
+    width: 2rem;
+    height: 2rem;
 
     display: block;
 
@@ -439,16 +486,16 @@ main section a {
 }
 
 .design .uploaded-image {
-    max-width: 6.25rem;
+    max-width: 100px;
     position: absolute;
-    top: 10rem;
+    top: 160px;
     left: 50%;
     transform: translateX(-50%);
 }
 
 .design .uploaded-text {
     position: absolute;
-    top: 7.5rem;
+    top: 120px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -458,7 +505,7 @@ main section a {
 /* Shopping cart */
 .shoppingcart table thead tr th {
     width: 35%;
-    padding-right: 8px;
+    padding-right: .5rem;
 
     font-family: 'Mulish-bold';
     font-weight: 700;
@@ -466,7 +513,7 @@ main section a {
 }
 
 .shoppingcart table tbody tr td {
-    padding-right: 8px;
+    padding-right: .5rem;
 }
 
 .shoppingcart table tbody tr td:last-of-type {
@@ -474,7 +521,7 @@ main section a {
 }
 
 .shoppingcart table tbody tr td:first-of-type img {
-    width: 64px;
+    width: 4rem;
 } 
 
 .shoppingcart table tbody tr td span {
@@ -488,9 +535,9 @@ main section a {
 }
 
 .shoppingcart table tbody button {
-    padding: 8px 8px;
+    padding: .5rem .5rem;
     border: none;
-    border-radius: 4.8px;
+    border-radius: .3rem;
 
     font-size: 0;
 
@@ -498,14 +545,14 @@ main section a {
 }
 
 .shoppingcart table tbody button svg {
-    width: 24px;
-    height: 24px;
+    width: 1.5rem;
+    height: 1.5rem;
 
     stroke: red;
 }
 
 .shoppingcart table + p {
-    margin: 16px 0;
+    margin: 1rem 0;
 }
 
 .shoppingcart table + p span {
@@ -515,7 +562,7 @@ main section a {
 }
 
 .shoppingcart p + a {
-    margin: 16px 0 8px;
+    margin: 1rem 0 .5rem;
 
     display: inline-block;
 }
@@ -523,7 +570,7 @@ main section a {
 
 /* Order */
 .order form {
-    max-width: 300px;
+    max-width: 18.75rem;
     width: 100%;
     margin: 0 auto;
 
@@ -542,7 +589,7 @@ main section a {
 .order form select {
     padding: 0.5em;
     border: none;
-    border-radius: 4.8px;
+    border-radius: .3rem;
 
     font-family: 'Mulish-Regular', sans-serif;
     font-weight: 400;
@@ -553,8 +600,8 @@ main section a {
 }
 
 .order form button {
-    margin-top: 16px;
-    padding: 12.8px;
+    margin-top: 1rem;
+    padding: .8rem;
 }
 
 
@@ -569,7 +616,7 @@ main section a {
 }
 
 .confirmation section a {
-    margin-top: 16px;
+    margin-top: 1rem;
 }
 
 
