@@ -29,6 +29,8 @@
     --light-blue: #6FFFE9;
     --blue: #5BC0BE;
     --dark-blue: #1C2541;
+
+    --t-shirt-color: #F2F2F2;
 }
 
 body {
@@ -47,15 +49,15 @@ br {
 }
 
 main {
-    padding: 0 1rem 5rem;
+    padding: 0 16px 80px;
 }
 
 h2 {
-    margin-top: 2.5rem;
+    margin-top: 40px;
 
     font-family: 'Mulish-Black', sans-serif;
     font-weight: 900;
-    font-size: 1.8rem;
+    font-size: 28.8px;
     color: var(--light-blue);
 
     text-align: center;
@@ -70,9 +72,9 @@ a:not(header a),
 .design ul li label:last-of-type button,
 .design ul li label:last-of-type span:nth-of-type(2),
 .order button {
-    padding: 0.5rem 0.8rem;
+    padding: 8px 12.8px;
     border: none;
-    border-radius: 0.5rem;
+    border-radius: 8px;
 
     background-color: var(--orange);
     text-decoration: none;
@@ -94,10 +96,9 @@ a:not(header a):hover,
 
 
 
-
 /* Hearder */
 header nav {
-    padding: 0.5rem 1rem;
+    padding: 8px 16px;
 
     display: flex;
     align-items: center;
@@ -113,7 +114,7 @@ header a h1 {
 
     font-family: 'Mulish-Black', sans-serif;
     font-weight: 900;
-    font-size: 1.5rem;
+    font-size: 24px;
     color: var(--white);
 }
 
@@ -122,8 +123,8 @@ header nav a:last-of-type {
 }
 
 header nav a svg {
-    width: 2rem;
-    height: 2rem;
+    width: 32px;
+    height: 32px;
 
     display: block;
 
@@ -141,11 +142,11 @@ main section {
 
 main section h2 {
     max-width: 11em;
-    margin: 1rem 0;
+    margin: 16px 0;
 
     font-family: 'Mulish-Black', sans-serif;
     font-weight: 900;
-    font-size: 2rem;
+    font-size: 32px;
     color: var(--light-blue);
 
     text-transform: uppercase;
@@ -172,18 +173,18 @@ main section a {
 
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    gap: 16px;
 
     list-style-type: none;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48rem) {
     .overview ul {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 64rem) {
     .overview ul {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
@@ -191,8 +192,8 @@ main section a {
 
 .overview li {
     height: 10em;
-    border: 0.2rem solid var(--light-blue);
-    border-radius: 1rem;
+    border: 3.2px solid var(--light-blue);
+    border-radius: 16px;
 }
 
 .overview li a {
@@ -228,18 +229,18 @@ main section a {
 /* Choose-size */
 .choose-size a,
 .design a {
-    padding-right: 1.3rem;
-    margin-top: 1rem;
+    padding-right: 20.8px;
+    margin-top: 16px;
 
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 8px;
 }
 
 .choose-size a svg,
 .design a svg {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 24px;
+    height: 24px;
 
     stroke: var(--white);
 }
@@ -250,20 +251,20 @@ main section a {
 
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 8px;
 }
 
 .choose-size section h3 {
     width: 100%;
-    margin: 1rem 0;
+    margin: 16px 0;
 
     font-family: 'Mulish-Bold', sans-serif;
     font-weight: 700;
-    font-size: 1.4rem;
+    font-size: 22.4px;
 }
 
 .choose-size section h3:first-of-type {
-    margin: 0 0 1rem;
+    margin: 0 0 16px;
 }
 
 .choose-size section input {
@@ -272,12 +273,12 @@ main section a {
 }
 
 .choose-size section input:checked + label {
-    border-radius: 0.5rem;
+    border-radius: 8px;
     background-color: var(--orange);
 }
 
 .choose-size section label {
-    padding: 0.5rem 0.8rem;
+    padding: 8px 12.8px;
 }
 
 .choose-size section p {
@@ -288,13 +289,13 @@ main section a {
 
 /* Design */
 .design nav {
-    width: calc(100% - 2rem);
-    height: 4rem;
-    border-radius: 0.5rem;
+    width: calc(100% - 32px);
+    height: 64px;
+    border-radius: 8px;
 
     position: fixed;
-    left: 1rem;
-    bottom: 1rem;
+    left: 16px;
+    bottom: 16px;
 
     background-color: var(--light-blue);
 }
@@ -346,14 +347,14 @@ main section a {
 }
 
 .design ul li:has(label:first-of-type input:checked) {
-    border-radius: 0.5rem;
+    border-radius: 8px;
     background-color: var(--orange);
 }
 
 .design ul li:has(label:first-of-type input:checked) label:last-of-type {
     width: 100%;
-    padding: 1.5rem 0 2rem;
-    border-radius: 0.5rem 0.5rem 0 0;
+    padding: 24px 0 32px;
+    border-radius: 8px 8px 0 0;
 
     display: block;
 
@@ -364,28 +365,28 @@ main section a {
 
     background-color: var(--light-blue);
 
-    font-size: 1rem;
+    font-size: 16px;
 }
 
 .design ul li:has(label:first-of-type input:checked) label:last-of-type span:first-of-type {
-    padding: 0 1rem;
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
+    padding: 0 16px;
+    margin-bottom: 8px;
+    font-size: 16px;
     color: var(--dark-blue);
 }
 
 .design ul li:first-of-type label:last-of-type span:first-of-type {
-    margin-bottom: 1rem;
+    margin-bottom: 16px;
     display: block;
 }
 
 .design ul li:first-of-type label:last-of-type span:nth-of-type(2) {
     display: inline-block;
-    margin: 0.5rem 0 0 1rem;
+    margin: 8px 0 0 16px;
 }
 
 .design ul li:has(label:first-of-type input:checked) label:last-of-type input {
-    padding: 0 1rem;
+    padding: 0 16px;
 
     color: var(--dark-blue);
 }
@@ -397,7 +398,7 @@ main section a {
 #text {
     padding: 0.5em;
     border: none;
-    border-radius: 0.3rem;
+    border-radius: 4.8px;
 }
 
 .design ul li:first-of-type label:last-of-type input {
@@ -405,8 +406,8 @@ main section a {
 } 
 
 .design ul li svg {
-    width: 2rem;
-    height: 2rem;
+    width: 32px;
+    height: 32px;
 
     display: block;
 
@@ -418,12 +419,42 @@ main section a {
     padding: 0;
 }
 
+/* .design picture {
+    margin: 0 auto;
+} */
+
+.design section:nth-of-type(2)  {
+    position: relative;
+}
+
+.design section:nth-of-type(2) svg {
+    width: 100%;
+    height: 25em;
+    fill: var(--white);
+    stroke: var(--white);
+}
+
+.design .uploaded-image {
+    max-width: 6.25rem;
+    position: absolute;
+    top: 10rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.design .uploaded-text {
+    position: absolute;
+    top: 7.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 
 
 /* Shopping cart */
 .shoppingcart table thead tr th {
     width: 35%;
-    padding-right: 0.5rem;
+    padding-right: 8px;
 
     font-family: 'Mulish-bold';
     font-weight: 700;
@@ -431,7 +462,7 @@ main section a {
 }
 
 .shoppingcart table tbody tr td {
-    padding-right: 0.5rem;
+    padding-right: 8px;
 }
 
 .shoppingcart table tbody tr td:last-of-type {
@@ -439,7 +470,7 @@ main section a {
 }
 
 .shoppingcart table tbody tr td:first-of-type img {
-    width: 4rem;
+    width: 64px;
 } 
 
 .shoppingcart table tbody tr td span {
@@ -453,9 +484,9 @@ main section a {
 }
 
 .shoppingcart table tbody button {
-    padding: 0.5rem 0.5rem;
+    padding: 8px 8px;
     border: none;
-    border-radius: 0.3rem;
+    border-radius: 4.8px;
 
     font-size: 0;
 
@@ -463,14 +494,14 @@ main section a {
 }
 
 .shoppingcart table tbody button svg {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 24px;
+    height: 24px;
 
     stroke: red;
 }
 
 .shoppingcart table + p {
-    margin: 1rem 0;
+    margin: 16px 0;
 }
 
 .shoppingcart table + p span {
@@ -480,7 +511,7 @@ main section a {
 }
 
 .shoppingcart p + a {
-    margin: 1rem 0 0.5rem;
+    margin: 16px 0 8px;
 
     display: inline-block;
 }
@@ -488,7 +519,7 @@ main section a {
 
 /* Order */
 .order form {
-    max-width: 18.75rem;
+    max-width: 300px;
     width: 100%;
     margin: 0 auto;
 
@@ -507,7 +538,7 @@ main section a {
 .order form select {
     padding: 0.5em;
     border: none;
-    border-radius: 0.3rem;
+    border-radius: 4.8px;
 
     font-family: 'Mulish-Regular', sans-serif;
     font-weight: 400;
@@ -518,8 +549,8 @@ main section a {
 }
 
 .order form button {
-    margin-top: 1rem;
-    padding: 0.8rem;
+    margin-top: 16px;
+    padding: 12.8px;
 }
 
 
@@ -534,7 +565,7 @@ main section a {
 }
 
 .confirmation section a {
-    margin-top: 1rem;
+    margin-top: 16px;
 }
 
 
