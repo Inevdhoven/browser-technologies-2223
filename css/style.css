@@ -168,6 +168,10 @@ main section a {
 
 
 /* Overview */
+.overview section {
+    height: auto;
+}
+
 .overview ul {
     padding: 0;
 
