@@ -24,6 +24,7 @@ let userAccount;
 const keyName = "shirtUserAccount";
 
 if (window.localStorage) {
+    console.log('local storage is supported');
     switch (path) {
         case '/':
             
