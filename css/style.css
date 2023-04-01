@@ -49,15 +49,15 @@ br {
 }
 
 main {
-    padding: 0 1rem 5rem;
+    padding: 0 16px 80px;
 }
 
 h2 {
-    margin-top: 2.5rem;
+    margin-top: 40px;
 
     font-family: 'Mulish-Black', sans-serif;
     font-weight: 900;
-    font-size: 1.8rem;
+    font-size: 28.8px;
     color: var(--light-blue);
 
     text-align: center;
@@ -69,17 +69,21 @@ p {
 }
 
 a:not(header a),
+.choose-size form button,
 .design ul li label:last-of-type button,
 .design ul li label:last-of-type span:nth-of-type(2),
 .order button {
-    padding: .5rem .8rem;
+    padding: 8px 12.8px;
     border: none;
-    border-radius: .5rem;
+    border-radius: 8px;
 
     background-color: var(--orange);
     text-decoration: none;
     text-transform: uppercase;
 
+    font-family: 'Mulish-Regular', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
     color: var(--white);
 
     transition: background-color 250ms ease;
@@ -87,6 +91,7 @@ a:not(header a),
 }
 
 a:not(header a):hover,
+.choose-size form button:hover,
 .design ul li label:last-of-type button:hover,
 .design ul li label:last-of-type span:nth-of-type(2):hover,
 .order button:hover {
@@ -98,7 +103,7 @@ a:not(header a):hover,
 
 /* Hearder */
 header nav {
-    padding: .5rem 1rem;
+    padding: 8px 16px;
 
     display: flex;
     align-items: center;
@@ -114,7 +119,7 @@ header a h1 {
 
     font-family: 'Mulish-Black', sans-serif;
     font-weight: 900;
-    font-size: 1.5rem;
+    font-size: 24px;
     color: var(--white);
 }
 
@@ -123,8 +128,8 @@ header nav a:last-of-type {
 }
 
 header nav a svg {
-    width: 2rem;
-    height: 2rem;
+    width: 32px;
+    height: 32px;
 
     display: block;
 
@@ -142,11 +147,11 @@ main section {
 
 main section h2 {
     max-width: 11em;
-    margin: 1rem 0;
+    margin: 16px 0;
 
     font-family: 'Mulish-Black', sans-serif;
     font-weight: 900;
-    font-size: 2rem;
+    font-size: 32px;
     color: var(--light-blue);
 
     text-transform: uppercase;
@@ -161,8 +166,8 @@ main section svg {
 }
 
 main section a {
-    font-family: 'Mulish-Medium', sans-serif;
-    font-weight: 700;
+    font-family: 'Mulish-Regular', sans-serif;
+    font-weight: 400;
 }
 
 
@@ -177,18 +182,18 @@ main section a {
 
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    gap: 16px;
 
     list-style-type: none;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48rem) {
     .overview ul {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 64rem) {
     .overview ul {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
@@ -197,8 +202,8 @@ main section a {
 .overview li {
     min-height: 10em;
     height: auto; 
-    border: .2rem solid var(--light-blue);
-    border-radius: 1rem;
+    border: 3.2px solid var(--light-blue);
+    border-radius: 16px;
 }
 
 .overview li:first-of-type svg {
@@ -230,7 +235,7 @@ main section a {
     width: 100%;
     height: 70%;
     position: relative;
-    top: -1.25rem;
+    top: -20px;
 }
 
 .overview li div svg {
@@ -244,15 +249,16 @@ main section a {
     display: block;
 
     position: absolute;
-    top: 50%;
+    top: 47%;
     left: 50%;
     transform: translate(-50%, -50%);
 
-    font-size: 8px;
+    font-size: 9.6px;
+    text-align: center;
 }
 
 .overview li div img {
-    width: 32px;
+    width: 25%;
 
     position: absolute;
     top: 75%;
@@ -275,25 +281,84 @@ main section a {
     display: none;
 }
 
+@media only screen and (min-width: 400px) {
+    .overview li div p {
+        font-size: 12.8px;
+    }
+    .overview li p {
+        margin: 1.6px 0;
+        font-size: 12.8px;
+    }
+}
+
+@media only screen and (min-width: 640px) {
+    .overview li div p {
+        font-size: 16px;
+    }
+    .overview li p {
+        margin: 4.8px 0;
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .overview li div p {
+        top: 40%;
+        font-size: 16px;
+    }
+    .overview li div img {
+        top: 65%;
+    }
+    .overview li p {
+        margin: 8px 0;
+        font-size: 19.2px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .overview li div p {
+        top: 45%;
+    }
+    .overview li div img {
+        top: 70%;
+    }
+}
+
 
 
 /* Choose-size */
+.choose-size h2,
+.choose-size section {
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.choose-size h2 {
+    margin: 40px auto 16px;
+}
+
 .choose-size a,
-.design a {
-    padding-right: 1.3rem;
-    margin-top: 1rem;
+.design a,
+.shoppingcart a:first-of-type {
+    padding-right: 20.8px;
+    margin-top: 16px;
 
     display: inline-flex;
     align-items: center;
-    gap: .5rem;
+    gap: 8px;
 }
 
 .choose-size a svg,
-.design a svg {
-    width: 1.5rem;
-    height: 1.5rem;
+.design a svg,
+.shoppingcart a svg {
+    width: 24px;
+    height: 24px;
 
     stroke: var(--white);
+}
+
+.choose-size h2 {
+    text-align: left;
 }
 
 .choose-size section,
@@ -302,20 +367,20 @@ main section a {
 
     display: flex;
     flex-wrap: wrap;
-    gap: .5rem;
+    gap: 8px;
 }
 
 .choose-size section h3 {
     width: 100%;
-    margin: 1rem 0;
+    margin: 16px 0;
 
     font-family: 'Mulish-Bold', sans-serif;
     font-weight: 700;
-    font-size: 1.4rem;
+    font-size: 22.4px;
 }
 
 .choose-size section h3:first-of-type {
-    margin: 0 0 1rem;
+    margin: 0 0 16px;
 }
 
 .choose-size section input {
@@ -324,29 +389,37 @@ main section a {
 }
 
 .choose-size section input:checked + label {
-    border-radius: .5rem;
+    border-radius: 8px;
     background-color: var(--orange);
 }
 
 .choose-size section label {
-    padding: .5rem .8rem;
+    padding: 8px 12.8px;
+    
+    display: inline-block;
+
+    font-size: 16px;
 }
 
 .choose-size section p {
     width: 100%;
+    margin: 32px 0 24px;
+
+    font-size: 16px;
+    line-height: 24px;
 }
 
 
 
 /* Design */
 .design nav {
-    width: calc(100% - 2rem);
-    height: 4rem;
-    border-radius: .5rem;
+    width: calc(100% - 32px);
+    height: 64px;
+    border-radius: 8px;
 
     position: fixed;
-    left: 1rem;
-    bottom: 1rem;
+    left: 16px;
+    bottom: 16px;
 
     background-color: var(--light-blue);
 }
@@ -356,20 +429,17 @@ main section a {
     padding: 0;
     margin: 0;
 
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
 
     list-style-type: none;
 }
 
 .design nav ul li {
+    max-width: calc(100% / 4);
+    width: 100%;
+    max-height: 64px;
     display: flex;
     justify-content: center;
-}
-
-.design nav ul li > *,
-.design nav ul li label > * {
-    cursor: pointer;
 }
 
 .design ul li label:first-of-type {
@@ -397,68 +467,43 @@ main section a {
     background: transparent;
 }
 
-.design ul li:has(label:first-of-type input:checked) {
-    border-radius: .5rem;
-    background-color: var(--orange);
-}
-
-.design ul li:has(label:first-of-type input:checked) label:last-of-type {
-    width: 100%;
-    padding: 1.5rem 0 2rem;
-    border-radius: .5rem .5rem 0 0;
-
-    display: block;
-
-    position: absolute;
-    bottom: 3.625em;
-    left: 0;
-    z-index: -1;
-
-    background-color: var(--light-blue);
-
-    font-size: 1rem;
-}
-
-.design ul li:has(label:first-of-type input:checked) label:last-of-type span:first-of-type {
-    padding: 0 1rem;
-    margin-bottom: .5rem;
-    font-size: 1rem;
-    color: var(--dark-blue);
-}
-
 .design ul li:first-of-type label:last-of-type span:first-of-type {
-    margin-bottom: 1rem;
+    margin-bottom: 16px;
     display: block;
 }
 
 .design ul li:first-of-type label:last-of-type span:nth-of-type(2) {
     display: inline-block;
-    margin: .5rem 0 0 1rem;
-}
-
-.design ul li:has(label:first-of-type input:checked) label:last-of-type input {
-    padding: 0 1rem;
-
-    color: var(--dark-blue);
+    margin: 8px 0 0 16px;
 }
 
 #color {
     padding: 0 0.2em;
+    margin: 0 16px;
 }
 
 #text {
     padding: 0.5em;
     border: none;
-    border-radius: .3rem;
+    border-radius: 4.8px;
+    margin: 8px 8px 8px 16px;
+
+    font-family: 'Mulish-Regular', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
 }
 
 .design ul li:first-of-type label:last-of-type input {
     display: none;
 } 
 
+.design ul li label:last-of-type button {
+    margin: 0 16px 0;
+}
+
 .design ul li svg {
-    width: 2rem;
-    height: 2rem;
+    width: 32px;
+    height: 32px;
 
     display: block;
 
@@ -469,10 +514,6 @@ main section a {
     margin: 0;
     padding: 0;
 }
-
-/* .design picture {
-    margin: 0 auto;
-} */
 
 .design section:nth-of-type(2)  {
     position: relative;
@@ -488,16 +529,168 @@ main section a {
 .design .uploaded-image {
     max-width: 100px;
     position: absolute;
-    top: 160px;
+    top: 170px;
     left: 50%;
     transform: translateX(-50%);
 }
 
 .design .uploaded-text {
     position: absolute;
-    top: 120px;
+    top: 125px;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.design section ul li:last-of-type form {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+}
+
+.design section ul li:last-of-type form button {
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: transparent;
+
+    font-size: 0;
+
+    transition: background-color 250ms ease;
+    cursor: pointer;
+}
+
+.design section ul li:last-of-type form button:hover {
+    background-color: var(--orange);
+}
+
+.design section ul li:last-of-type form button svg {
+    transition: stroke 250ms ease;
+}
+
+.design section ul li:last-of-type form button:hover svg {
+    stroke: var(--white);
+}
+
+@media only screen and (min-width: 24rem) {
+    .design .uploaded-text {
+        font-size: 1.5rem;
+        margin: 0;
+    }
+
+    .design .uploaded-image {
+        top: 11.2rem;
+    }
+
+    .design ul li label:last-of-type button {
+        margin: 0 1rem 0 0;
+    }
+}
+
+@media only screen and (min-width: 48rem) {
+    .design {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .design a,
+    .design h2 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        max-width: fit-content;
+    }
+    .design h2 {
+        margin: 2.5rem auto;
+    }
+    .design section {
+        justify-content: center;
+    }
+    .design section nav {
+        max-width: 28.125rem;
+        height: auto;
+        position: relative;
+    }
+    .design section nav ul {
+        /* display: grid;
+        grid-template-columns: 1fr; */
+        flex-direction: column;
+    }
+    .design nav ul li {
+        max-width: 100%;
+        max-height: inherit;
+
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .design ul li label:first-of-type {
+        padding: 1rem;
+    }
+    .design ul li label:nth-of-type(2) {
+        padding: 0.5rem 1rem;
+        display: block;
+    }
+    .design ul li:first-of-type label:last-of-type span:first-of-type {
+        margin: 0.3rem 0;
+        font-size: 1rem;
+        color: var(--dark-blue);
+    }
+    .design ul li:first-of-type label:last-of-type span:nth-of-type(2) {
+        margin: 0;
+    }
+    .design ul li label:first-of-type input {
+        inset: auto;
+    }
+    #text {
+        margin: 0 0.5rem 0.5rem 0;
+    }
+    .design section ul li:last-of-type form button {
+        padding: 8px;
+
+        display: flex;
+        gap: 8px;
+        
+        font-family: 'Mulish-Regular', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+
+        transition: all 250ms ease;
+    }
+    .design section ul li:last-of-type form button:hover {
+        color: var(--white);
+    }
+    .design section ul li:last-of-type form button svg {
+        order: -1;
+    }
+}
+
+@media only screen and (min-width: 64rem) {
+    .design section:nth-of-type(2) svg {
+        height: 35em;
+    }
+    .design .uploaded-image {
+        max-width: 10rem;
+        top: 15rem;
+    }
+    .design .uploaded-text {
+        top: 11rem;
+    }
+}
+
+@media only screen and (min-width: 96rem) {
+    .design section:nth-of-type(2) svg {
+        height: 45em;
+    }
+    .design .uploaded-image {
+        max-width: 15rem;
+        top: 19rem;
+    }
+    .design .uploaded-text {
+        top: 15rem;
+    }
 }
 
 
@@ -505,23 +698,24 @@ main section a {
 /* Shopping cart */
 .shoppingcart table thead tr th {
     width: 35%;
-    padding-right: .5rem;
+    padding-right: 8px;
 
     font-family: 'Mulish-bold';
     font-weight: 700;
     text-align: left;
 }
 
-.shoppingcart table tbody tr td {
-    padding-right: .5rem;
+.shoppingcart table thead tr th:first-of-type,
+.shoppingcart table tbody tr td:first-of-type {
+    display: none;
 }
 
-.shoppingcart table tbody tr td:last-of-type {
-    text-align: center;
+.shoppingcart table tbody tr td {
+    padding-right: 8px;
 }
 
 .shoppingcart table tbody tr td:first-of-type img {
-    width: 4rem;
+    width: 64px;
 } 
 
 .shoppingcart table tbody tr td span {
@@ -535,9 +729,9 @@ main section a {
 }
 
 .shoppingcart table tbody button {
-    padding: .5rem .5rem;
+    padding: 8px 8px;
     border: none;
-    border-radius: .3rem;
+    border-radius: 4.8px;
 
     font-size: 0;
 
@@ -545,14 +739,14 @@ main section a {
 }
 
 .shoppingcart table tbody button svg {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 24px;
+    height: 24px;
 
     stroke: red;
 }
 
 .shoppingcart table + p {
-    margin: 1rem 0;
+    margin: 16px 0;
 }
 
 .shoppingcart table + p span {
@@ -562,15 +756,103 @@ main section a {
 }
 
 .shoppingcart p + a {
-    margin: 1rem 0 .5rem;
+    margin: 16px 0 8px;
 
     display: inline-block;
 }
 
+@media only screen and (min-width: 23.125rem) {
+    .shoppingcart table {
+        width: 100%;
+        max-width: 43.75rem;
+        margin: 0 auto;
+    }
+    .shoppingcart table thead tr th:first-of-type,
+    .shoppingcart table tbody tr td:first-of-type {
+        display: table-cell;
+    }
+    .shoppingcart table tbody tr td:first-of-type div {
+        width: fit-content;
+        position: relative;
+    }
+    .shoppingcart table tbody tr td:first-of-type svg {
+        width: 6.25rem;
+        height: 6.25rem;
+        display: block;
+    }
+    .shoppingcart table tbody tr td:first-of-type img {
+        width: 25%;
+        position: absolute;
+        top: 62%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .shoppingcart table tbody tr td:first-of-type p {
+        position: absolute;
+        top: 26%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 0.55rem;
+        text-align: center;
+    }
+    .shoppingcart table tbody tr td:nth-of-type(2) p {
+        margin: 0.5rem 0;
+    }
+    .shoppingcart table tbody tr td img.t-shirt {
+        width: 4rem;
+        position: relative;
+        top: inherit;
+        left: inherit;
+        transform: none;
+    }
+}
+
+@media only screen and (min-width: 48rem) {
+    .shoppingcart table {
+        padding: 1rem 1.5rem;
+        border-collapse: collapse;
+    }
+    .shoppingcart table thead tr th,
+    .shoppingcart table tbody tr td {
+        padding: 0.5rem;
+        border-right: 0.125rem solid var(--light-blue);
+    }
+    .shoppingcart table tbody tr td {
+        border-top: 0.125rem solid var(--light-blue);
+    }
+    .shoppingcart table thead tr th:last-of-type,
+    .shoppingcart table tbody tr td:last-of-type {
+        border-right: none;
+    }
+    .shoppingcart table tbody tr td:first-of-type svg {
+        width: 14.25rem;
+        height: 14.25rem;
+    }
+    .shoppingcart table tbody tr td:first-of-type img {
+        width: 30%;
+    }
+    .shoppingcart table tbody tr td:first-of-type p {
+        top: 29%;
+        font-size: 1rem;
+    }
+    .shoppingcart table + p {
+        text-align: center;
+    }
+    .shoppingcart > a:last-of-type {
+        display: table;
+        margin: 0 auto;
+    }
+}
+
 
 /* Order */
+.order {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .order form {
-    max-width: 18.75rem;
+    max-width: 300px;
     width: 100%;
     margin: 0 auto;
 
@@ -589,7 +871,7 @@ main section a {
 .order form select {
     padding: 0.5em;
     border: none;
-    border-radius: .3rem;
+    border-radius: 4.8px;
 
     font-family: 'Mulish-Regular', sans-serif;
     font-weight: 400;
@@ -600,13 +882,17 @@ main section a {
 }
 
 .order form button {
-    margin-top: 1rem;
-    padding: .8rem;
+    margin-top: 16px;
+    padding: 12.8px;
 }
 
 
 /* Confirmation */
 .confirmation section {
+    max-width: 20.625rem;
+    height: auto;
+    margin: 5rem auto;
+
     grid-template-rows: repeat(3, min-content);
     place-items: flex-start;
 }
@@ -616,15 +902,111 @@ main section a {
 }
 
 .confirmation section a {
-    margin-top: 1rem;
+    margin-top: 16px;
+
+    font-family: 'Mulish-Regular', sans-serif;
+    font-weight: 400;
 }
 
+@media only screen and (min-width: 48rem) {
+    .confirmation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
 
 
 /* Support */
 @supports not (appearance: none) {
-    .design ul li input,
-    .choose-size section input {
+    .design ul li input[type="radio"],
+    .choose-size section input[type="radio"] {
         opacity: 0;
+    }
+}
+
+@supports (cursor: pointer) {
+    .design nav ul li > *,
+    .design nav ul li label > * {
+        cursor: pointer;
+    }
+}
+
+@supports selector(:has(*)) {
+    .design ul li:has(label:first-of-type input:checked) {
+        border-radius: 8px;
+        background-color: var(--orange);
+    }
+    
+    .design ul li:has(label:first-of-type input:checked) label:first-of-type svg {
+        stroke: var(--white);
+    }
+    
+    .design ul li:has(label:first-of-type input:checked) label:last-of-type {
+        width: 100%;
+        padding: 24px 0 32px;
+        border-radius: 8px 8px 0 0;
+    
+        display: block;
+    
+        position: absolute;
+        bottom: 3.625em;
+        left: 0;
+        z-index: -1;
+    
+        background-color: var(--light-blue);
+    
+        font-size: 16px;
+    }
+    
+    .design ul li:has(label:first-of-type input:checked) label:last-of-type span:first-of-type {
+        padding: 0 16px;
+        margin-bottom: 8px;
+    
+        display: block;
+    
+        font-size: 16px;
+        color: var(--dark-blue);
+    }
+
+    .design ul li:has(label:first-of-type input:checked) label:last-of-type input {
+        padding: 0 16px;
+    
+        color: var(--dark-blue);
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .design ul li:has(label:first-of-type input:checked) {
+            background-color: transparent;
+        }
+        
+        .design ul li:has(label:first-of-type input:checked) label:first-of-type svg {
+            stroke: var(--dark-blue)
+        }
+
+        .design ul li:has(label:first-of-type input:checked) label:last-of-type {
+            padding: 0.5rem 0;
+            
+            position: relative;
+            bottom: inherit;
+            left: inherit;
+            z-index: 1;
+        }
+
+        .design ul li label:nth-of-type(2) span {
+            margin: 0.5rem 0;
+            display: block;
+            font-size: 1rem;
+            color: var(--dark-blue);
+        }
+
+        .design ul li:has(label:first-of-type input:checked) label:last-of-type {
+            margin: 0;
+            padding: 0;
+        }
+
+        .design ul li label:nth-of-type(2) #color {
+            margin: 0;
+        }
     }
 }
