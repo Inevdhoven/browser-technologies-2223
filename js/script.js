@@ -1,3 +1,4 @@
+console.log('script.js loaded');
 let tshirtOrder = {
     "id": '',
     "size": '',
