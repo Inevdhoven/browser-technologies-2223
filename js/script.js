@@ -29,6 +29,7 @@ let userAccount;
 // console.log(id);
 
 const keyName = "shirtUserAccount";
+console.log(keyName);
 
 // if (window.localStorage) {
     // console.log('local storage is supported');
