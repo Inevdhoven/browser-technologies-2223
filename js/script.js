@@ -40,6 +40,8 @@ if (window.localStorage) {
 
             const newDesignButton = document.querySelector('.overview a');
             newDesignButton.href = `choose-size.html#${orderId}`;
+            const newDesignButton2 = document.querySelector('.overview section a');
+            newDesignButton2.href = `choose-size.html#${orderId}`;
             console.log(newDesignButton.href);
 
             console.log('new generated id:', id);
