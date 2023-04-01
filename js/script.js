@@ -455,3 +455,8 @@ if (window.localStorage) {
         return true;
     }
 }
+
+if (path == '/design.html' || path == '/winkelwagen.html') {
+    const a = document.querySelector('a.back');
+    a.href = `javascript: history.go(-1)`;
+}
