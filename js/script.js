@@ -1,4 +1,3 @@
-console.log('script.js loaded');
 let tshirtOrder = {
     "id": '',
     "size": '',
@@ -8,37 +7,28 @@ let tshirtOrder = {
     "image": '',
 }
 
-console.log(tshirtOrder);
-
 let userAccountObject = {
     orders: {}
 }
 
-console.log(userAccountObject);
-
 let path = window.location.pathname;
-console.log('path: ' + path);
-let id = Math.random().toString(36).substring(2, 8);
-console.log('id: ' + id);
+let id = Math.random().toString(36).substring(2, 8)
 let orderId = 'id=' + id;
-console.log('order id: ' + orderId);
 let orderExists = '';
 let userAccount;
 
-// console.log(tshirtOrder);
-// console.log(id);
+console.log(tshirtOrder);
+console.log(id);
 
 const keyName = "shirtUserAccount";
-console.log(keyName);
 
-// if (window.localStorage) {
-    // console.log('local storage is supported');
+if (window.localStorage) {
     switch (path) {
-        case 'index.html':
-            console.log('home page');
+        case '/':
+            
             break;
-        case 'overview.html':
-            console.log('overview page');
+        case '/overview.html':
+            
             // let userAccount;
             if (localStorage.getItem(keyName)) {
                 userAccount = JSON.parse(localStorage.getItem(keyName));
@@ -127,7 +117,7 @@ console.log(keyName);
             //     console.log(item)
             // }
             break;
-        case 'choose-size.html':
+        case '/choose-size.html':
             const currentOrderId = window.location.hash.replace('#id=', '');
             console.log('editing order: ', currentOrderId);
 
@@ -184,7 +174,7 @@ console.log(keyName);
             });
 
             break;
-        case 'design.html':
+        case '/design.html':
             const currentOrderIdDesgin = window.location.hash.replace('#id=', '');
             console.log('editing order: ', currentOrderIdDesgin);
 
@@ -341,7 +331,7 @@ console.log(keyName);
             
 
             break;
-        case 'winkelwagen.html':
+        case '/winkelwagen.html':
             userAccount = JSON.parse(localStorage.getItem(keyName));
             console.log(userAccount);
             const orderOverview = document.querySelector('.shoppingcart table tbody');
@@ -442,10 +432,10 @@ console.log(keyName);
                 filledTotalPrice.textContent = '€ ' + totalPrice.toFixed(2);
             }
             break;
-        case 'order.html':
+        case '/order.html':
                 //Do something
                 break;
-        case 'order-confirmation.html':
+        case '/order-confirmation.html':
             //Do something
             break;
         default:
@@ -466,9 +456,9 @@ console.log(keyName);
         localStorage.setItem(keyName, JSON.stringify(newOrderObject));
         return true;
     }
-// }
+}
 
-if (path == 'design.html' || path == 'winkelwagen.html') {
+if (path == '/design.html' || path == '/winkelwagen.html') {
     const a = document.querySelector('a.back');
     a.href = `javascript: history.go(-1)`;
 }
