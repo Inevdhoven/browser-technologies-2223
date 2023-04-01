@@ -23,8 +23,8 @@ let userAccount;
 
 const keyName = "shirtUserAccount";
 
-if (window.localStorage) {
-    console.log('local storage is supported');
+// if (window.localStorage) {
+    // console.log('local storage is supported');
     switch (path) {
         case '/':
             
@@ -458,7 +458,7 @@ if (window.localStorage) {
         localStorage.setItem(keyName, JSON.stringify(newOrderObject));
         return true;
     }
-}
+// }
 
 if (path == '/design.html' || path == '/winkelwagen.html') {
     const a = document.querySelector('a.back');
