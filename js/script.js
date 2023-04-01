@@ -34,10 +34,10 @@ console.log(keyName);
 // if (window.localStorage) {
     // console.log('local storage is supported');
     switch (path) {
-        case '/':
+        case 'index.html':
             console.log('home page');
             break;
-        case '/overview.html':
+        case 'overview.html':
             console.log('overview page');
             // let userAccount;
             if (localStorage.getItem(keyName)) {
@@ -127,7 +127,7 @@ console.log(keyName);
             //     console.log(item)
             // }
             break;
-        case '/choose-size.html':
+        case 'choose-size.html':
             const currentOrderId = window.location.hash.replace('#id=', '');
             console.log('editing order: ', currentOrderId);
 
@@ -184,7 +184,7 @@ console.log(keyName);
             });
 
             break;
-        case '/design.html':
+        case 'design.html':
             const currentOrderIdDesgin = window.location.hash.replace('#id=', '');
             console.log('editing order: ', currentOrderIdDesgin);
 
@@ -341,7 +341,7 @@ console.log(keyName);
             
 
             break;
-        case '/winkelwagen.html':
+        case 'winkelwagen.html':
             userAccount = JSON.parse(localStorage.getItem(keyName));
             console.log(userAccount);
             const orderOverview = document.querySelector('.shoppingcart table tbody');
@@ -442,10 +442,10 @@ console.log(keyName);
                 filledTotalPrice.textContent = '€ ' + totalPrice.toFixed(2);
             }
             break;
-        case '/order.html':
+        case 'order.html':
                 //Do something
                 break;
-        case '/order-confirmation.html':
+        case 'order-confirmation.html':
             //Do something
             break;
         default:
@@ -468,7 +468,7 @@ console.log(keyName);
     }
 // }
 
-if (path == '/design.html' || path == '/winkelwagen.html') {
+if (path == 'design.html' || path == 'winkelwagen.html') {
     const a = document.querySelector('a.back');
     a.href = `javascript: history.go(-1)`;
 }
