@@ -8,19 +8,22 @@ let tshirtOrder = {
     "image": '',
 }
 
+console.log(tshirtOrder);
+
 let userAccountObject = {
     orders: {}
 }
 
+console.log(userAccountObject);
+
 let path = window.location.pathname;
-let id = Math.random().toString(36).substring(2, 8)
+console.log('path: ' + path);
+let id = Math.random().toString(36).substring(2, 8);
+console.log('id: ' + id);
 let orderId = 'id=' + id;
+console.log('order id: ' + orderId);
 let orderExists = '';
 let userAccount;
-
-console.log('path: ' + path);
-console.log('id: ' + id);
-console.log('order id: ' + orderId);
 
 // console.log(tshirtOrder);
 // console.log(id);
