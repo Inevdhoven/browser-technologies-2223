@@ -18,6 +18,10 @@ let orderId = 'id=' + id;
 let orderExists = '';
 let userAccount;
 
+console.log('path: ' + path);
+console.log('id: ' + id);
+console.log('order id: ' + orderId);
+
 // console.log(tshirtOrder);
 // console.log(id);
 
@@ -27,10 +31,10 @@ const keyName = "shirtUserAccount";
     // console.log('local storage is supported');
     switch (path) {
         case '/':
-            
+            console.log('home page');
             break;
         case '/overview.html':
-            
+            console.log('overview page');
             // let userAccount;
             if (localStorage.getItem(keyName)) {
                 userAccount = JSON.parse(localStorage.getItem(keyName));
