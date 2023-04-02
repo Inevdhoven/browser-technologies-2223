@@ -24,6 +24,7 @@
 
 :root {
     --white: #fff;
+    --black: #000;
 
     --orange: #ef7b45;
     --light-blue: #6FFFE9;
@@ -49,15 +50,15 @@ br {
 }
 
 main {
-    padding: 0 16px 80px;
+    padding: 0 1rem 5rem;
 }
 
 h2 {
-    margin-top: 40px;
+    margin-top: 2.5rem;
 
     font-family: 'Mulish-Black', sans-serif;
     font-weight: 900;
-    font-size: 28.8px;
+    font-size: 1.8rem;
     color: var(--light-blue);
 
     text-align: center;
@@ -73,9 +74,9 @@ a:not(header a),
 .design ul li label:last-of-type button,
 .design ul li label:last-of-type span:nth-of-type(2),
 .order button {
-    padding: 8px 12.8px;
+    padding: .5rem .8rem;
     border: none;
-    border-radius: 8px;
+    border-radius: .5rem;
 
     background-color: var(--orange);
     text-decoration: none;
@@ -83,8 +84,8 @@ a:not(header a),
 
     font-family: 'Mulish-Regular', sans-serif;
     font-weight: 400;
-    font-size: 16px;
-    color: var(--white);
+    font-size: 1rem;
+    color: var(--black);
 
     transition: background-color 250ms ease;
     cursor: pointer;
@@ -103,7 +104,7 @@ a:not(header a):hover,
 
 /* Hearder */
 header nav {
-    padding: 8px 16px;
+    padding: .5rem 1rem;
 
     display: flex;
     align-items: center;
@@ -111,6 +112,7 @@ header nav {
 }
 
 header a {
+    color: var(--white);
     text-decoration: none;
 }
 
@@ -119,7 +121,7 @@ header a h1 {
 
     font-family: 'Mulish-Black', sans-serif;
     font-weight: 900;
-    font-size: 24px;
+    font-size: 1.5rem;
     color: var(--white);
 }
 
@@ -128,8 +130,8 @@ header nav a:last-of-type {
 }
 
 header nav a svg {
-    width: 32px;
-    height: 32px;
+    width: 2rem;
+    height: 2rem;
 
     display: block;
 
@@ -147,11 +149,11 @@ main section {
 
 main section h2 {
     max-width: 11em;
-    margin: 16px 0;
+    margin: 1rem 0;
 
     font-family: 'Mulish-Black', sans-serif;
     font-weight: 900;
-    font-size: 32px;
+    font-size: 2rem;
     color: var(--light-blue);
 
     text-transform: uppercase;
@@ -182,18 +184,18 @@ main section a {
 
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 16px;
+    gap: 1rem;
 
     list-style-type: none;
 }
 
-@media only screen and (min-width: 48rem) {
+@media only screen and (min-width: 768px) {
     .overview ul {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
-@media only screen and (min-width: 64rem) {
+@media only screen and (min-width: 1024px) {
     .overview ul {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
@@ -202,8 +204,8 @@ main section a {
 .overview li {
     min-height: 10em;
     height: auto; 
-    border: 3.2px solid var(--light-blue);
-    border-radius: 16px;
+    border: .2rem solid var(--light-blue);
+    border-radius: 1rem;
 }
 
 .overview li:first-of-type svg {
@@ -235,7 +237,7 @@ main section a {
     width: 100%;
     height: 70%;
     position: relative;
-    top: -20px;
+    top: -1.25rem;
 }
 
 .overview li div svg {
@@ -253,8 +255,9 @@ main section a {
     left: 50%;
     transform: translate(-50%, -50%);
 
-    font-size: 9.6px;
+    font-size: .6rem;
     text-align: center;
+    text-transform: initial;
 }
 
 .overview li div img {
@@ -268,7 +271,7 @@ main section a {
 
 .overview li p {
     margin: 0;
-    font-size: 11.2px;
+    font-size: .7rem;
     display: inline-block;
 }
 
@@ -281,41 +284,41 @@ main section a {
     display: none;
 }
 
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 25rem) {
     .overview li div p {
-        font-size: 12.8px;
+        font-size: .8rem;
     }
     .overview li p {
-        margin: 1.6px 0;
-        font-size: 12.8px;
+        margin: .1rem 0;
+        font-size: .8rem;
     }
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 40rem) {
     .overview li div p {
-        font-size: 16px;
+        font-size: 1rem;
     }
     .overview li p {
-        margin: 4.8px 0;
-        font-size: 16px;
+        margin: .3rem 0;
+        font-size: 1rem;
     }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48rem) {
     .overview li div p {
         top: 40%;
-        font-size: 16px;
+        font-size: 1rem;
     }
     .overview li div img {
         top: 65%;
     }
     .overview li p {
-        margin: 8px 0;
-        font-size: 19.2px;
+        margin: .5rem 0;
+        font-size: 1.2rem;
     }
 }
 
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 90rem) {
     .overview li div p {
         top: 45%;
     }
@@ -329,32 +332,32 @@ main section a {
 /* Choose-size */
 .choose-size h2,
 .choose-size section {
-    max-width: 480px;
+    max-width: 30rem;
     margin: 0 auto;
 }
 
 .choose-size h2 {
-    margin: 40px auto 16px;
+    margin: 2.5rem auto 1rem;
 }
 
 .choose-size a,
 .design a,
 .shoppingcart a:first-of-type {
-    padding-right: 20.8px;
-    margin-top: 16px;
+    padding-right: 1.3rem;
+    margin-top: 1rem;
 
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: .5rem;
 }
 
 .choose-size a svg,
 .design a svg,
 .shoppingcart a svg {
-    width: 24px;
-    height: 24px;
+    width: 1.5rem;
+    height: 1.5rem;
 
-    stroke: var(--white);
+    stroke: var(--black);
 }
 
 .choose-size h2 {
@@ -367,20 +370,20 @@ main section a {
 
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: .5rem;
 }
 
 .choose-size section h3 {
     width: 100%;
-    margin: 16px 0;
+    margin: 1rem 0;
 
     font-family: 'Mulish-Bold', sans-serif;
     font-weight: 700;
-    font-size: 22.4px;
+    font-size: 1.4rem;
 }
 
 .choose-size section h3:first-of-type {
-    margin: 0 0 16px;
+    margin: 0 0 1rem;
 }
 
 .choose-size section input {
@@ -389,37 +392,38 @@ main section a {
 }
 
 .choose-size section input:checked + label {
-    border-radius: 8px;
+    border-radius: .5rem;
     background-color: var(--orange);
+    color: var(--black);
 }
 
 .choose-size section label {
-    padding: 8px 12.8px;
+    padding: .5rem .8rem;
     
     display: inline-block;
 
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .choose-size section p {
     width: 100%;
-    margin: 32px 0 24px;
+    margin: 2rem 0 1.5rem;
 
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1rem;
+    line-height: 1.5rem;
 }
 
 
 
 /* Design */
 .design nav {
-    width: calc(100% - 32px);
-    height: 64px;
-    border-radius: 8px;
+    width: calc(100% - 2rem);
+    height: 4rem;
+    border-radius: .5rem;
 
     position: fixed;
-    left: 16px;
-    bottom: 16px;
+    left: 1rem;
+    bottom: 1rem;
 
     background-color: var(--light-blue);
 }
@@ -437,7 +441,7 @@ main section a {
 .design nav ul li {
     max-width: calc(100% / 4);
     width: 100%;
-    max-height: 64px;
+    max-height: 4rem;
     display: flex;
     justify-content: center;
 }
@@ -449,6 +453,8 @@ main section a {
     align-items: center;
 
     position: relative;
+
+    color: var(--black);
 }
 
 .design ul li label:nth-of-type(2) {
@@ -468,29 +474,30 @@ main section a {
 }
 
 .design ul li:first-of-type label:last-of-type span:first-of-type {
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
     display: block;
 }
 
 .design ul li:first-of-type label:last-of-type span:nth-of-type(2) {
     display: inline-block;
-    margin: 8px 0 0 16px;
+    margin: .5rem 0 0 1rem;
 }
 
 #color {
     padding: 0 0.2em;
-    margin: 0 16px;
+    margin: 0 1rem;
 }
 
 #text {
     padding: 0.5em;
     border: none;
-    border-radius: 4.8px;
-    margin: 8px 8px 8px 16px;
+    /* border: .125rem solid var(--dark-blue); */
+    border-radius: .3rem;
+    margin: .5rem .5rem .5rem 1rem;
 
     font-family: 'Mulish-Regular', sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .design ul li:first-of-type label:last-of-type input {
@@ -498,12 +505,12 @@ main section a {
 } 
 
 .design ul li label:last-of-type button {
-    margin: 0 16px 0;
+    margin: 0 1rem 0;
 }
 
 .design ul li svg {
-    width: 32px;
-    height: 32px;
+    width: 2rem;
+    height: 2rem;
 
     display: block;
 
@@ -517,26 +524,31 @@ main section a {
 
 .design section:nth-of-type(2)  {
     position: relative;
+    z-index: -1;
 }
 
 .design section:nth-of-type(2) svg {
     width: 100%;
     height: 25em;
+
+    position: relative;
+    z-index: -1;
+
     fill: var(--white);
     stroke: var(--white);
 }
 
 .design .uploaded-image {
-    max-width: 100px;
+    max-width: 6.25rem;
     position: absolute;
-    top: 170px;
+    top: 10.625rem;
     left: 50%;
     transform: translateX(-50%);
 }
 
 .design .uploaded-text {
     position: absolute;
-    top: 125px;
+    top: 7.8125rem;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -551,7 +563,7 @@ main section a {
 .design section ul li:last-of-type form button {
     width: 100%;
     border: none;
-    border-radius: 8px;
+    border-radius: .5rem;
 
     display: flex;
     justify-content: center;
@@ -574,25 +586,25 @@ main section a {
 }
 
 .design section ul li:last-of-type form button:hover svg {
-    stroke: var(--white);
+    stroke: var(--black);
 }
 
-@media only screen and (min-width: 24rem) {
+@media only screen and (min-width: 410px) {
     .design .uploaded-text {
-        font-size: 1.5rem;
+        font-size: 24px;
         margin: 0;
     }
 
     .design .uploaded-image {
-        top: 11.2rem;
+        top: 179.2px;
     }
 
     .design ul li label:last-of-type button {
-        margin: 0 1rem 0 0;
+        margin: 0 16px 0 0;
     }
 }
 
-@media only screen and (min-width: 48rem) {
+@media only screen and (min-width: 768px) {
     .design {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -604,19 +616,17 @@ main section a {
         max-width: fit-content;
     }
     .design h2 {
-        margin: 2.5rem auto;
+        margin: 40px auto;
     }
     .design section {
         justify-content: center;
     }
     .design section nav {
-        max-width: 28.125rem;
+        max-width: 450px;
         height: auto;
         position: relative;
     }
     .design section nav ul {
-        /* display: grid;
-        grid-template-columns: 1fr; */
         flex-direction: column;
     }
     .design nav ul li {
@@ -627,15 +637,15 @@ main section a {
         align-items: center;
     }
     .design ul li label:first-of-type {
-        padding: 1rem;
+        padding: 16px;
     }
     .design ul li label:nth-of-type(2) {
-        padding: 0.5rem 1rem;
+        padding: 8px 16px;
         display: block;
     }
     .design ul li:first-of-type label:last-of-type span:first-of-type {
-        margin: 0.3rem 0;
-        font-size: 1rem;
+        margin: 4.8px 0;
+        font-size: 16px;
         color: var(--dark-blue);
     }
     .design ul li:first-of-type label:last-of-type span:nth-of-type(2) {
@@ -645,51 +655,51 @@ main section a {
         inset: auto;
     }
     #text {
-        margin: 0 0.5rem 0.5rem 0;
+        margin: 0 8px 8px 0;
     }
     .design section ul li:last-of-type form button {
-        padding: 8px;
+        padding: .5rem;
 
         display: flex;
-        gap: 8px;
+        gap: .5rem;
         
         font-family: 'Mulish-Regular', sans-serif;
         font-weight: 400;
-        font-size: 16px;
+        font-size: 1rem;
 
         transition: all 250ms ease;
     }
     .design section ul li:last-of-type form button:hover {
-        color: var(--white);
+        color: var(--black);
     }
     .design section ul li:last-of-type form button svg {
         order: -1;
     }
 }
 
-@media only screen and (min-width: 64rem) {
+@media only screen and (min-width: 1024px) {
     .design section:nth-of-type(2) svg {
         height: 35em;
     }
     .design .uploaded-image {
-        max-width: 10rem;
-        top: 15rem;
+        max-width: 160px;
+        top: 240px;
     }
     .design .uploaded-text {
-        top: 11rem;
+        top: 176px;
     }
 }
 
-@media only screen and (min-width: 96rem) {
+@media only screen and (min-width: 1536px) {
     .design section:nth-of-type(2) svg {
         height: 45em;
     }
     .design .uploaded-image {
-        max-width: 15rem;
-        top: 19rem;
+        max-width: 240px;
+        top: 304px;
     }
     .design .uploaded-text {
-        top: 15rem;
+        top: 240px;
     }
 }
 
@@ -698,9 +708,9 @@ main section a {
 /* Shopping cart */
 .shoppingcart table thead tr th {
     width: 35%;
-    padding-right: 8px;
+    padding-right: .5rem;
 
-    font-family: 'Mulish-bold';
+    font-family: 'Mulish-bold', sans-serif;
     font-weight: 700;
     text-align: left;
 }
@@ -711,11 +721,11 @@ main section a {
 }
 
 .shoppingcart table tbody tr td {
-    padding-right: 8px;
+    padding-right: .5rem;
 }
 
 .shoppingcart table tbody tr td:first-of-type img {
-    width: 64px;
+    width: 4rem;
 } 
 
 .shoppingcart table tbody tr td span {
@@ -723,15 +733,15 @@ main section a {
 }
 
 .shoppingcart table tbody tr td span:last-of-type {
-    font-family: 'Mulish-bold';
+    font-family: 'Mulish-bold', sans-serif;
     font-weight: 700;
     color: var(--orange);
 }
 
 .shoppingcart table tbody button {
-    padding: 8px 8px;
+    padding: .5rem .5rem;
     border: none;
-    border-radius: 4.8px;
+    border-radius: .3rem;
 
     font-size: 0;
 
@@ -739,32 +749,32 @@ main section a {
 }
 
 .shoppingcart table tbody button svg {
-    width: 24px;
-    height: 24px;
+    width: 1.5rem;
+    height: 1.5rem;
 
     stroke: red;
 }
 
 .shoppingcart table + p {
-    margin: 16px 0;
+    margin: 1rem 0;
 }
 
 .shoppingcart table + p span {
-    font-family: 'Mulish-bold';
+    font-family: 'Mulish-bold', sans-serif;
     font-weight: 700;
     color: var(--light-blue);
 }
 
 .shoppingcart p + a {
-    margin: 16px 0 8px;
+    margin: 1rem 0 .5rem;
 
     display: inline-block;
 }
 
-@media only screen and (min-width: 23.125rem) {
+@media only screen and (min-width: 370px) {
     .shoppingcart table {
         width: 100%;
-        max-width: 43.75rem;
+        max-width: 700px;
         margin: 0 auto;
     }
     .shoppingcart table thead tr th:first-of-type,
@@ -776,8 +786,8 @@ main section a {
         position: relative;
     }
     .shoppingcart table tbody tr td:first-of-type svg {
-        width: 6.25rem;
-        height: 6.25rem;
+        width: 100px;
+        height: 100px;
         display: block;
     }
     .shoppingcart table tbody tr td:first-of-type img {
@@ -792,14 +802,14 @@ main section a {
         top: 26%;
         left: 50%;
         transform: translate(-50%, -50%);
-        font-size: 0.55rem;
+        font-size: 8.8px;
         text-align: center;
     }
     .shoppingcart table tbody tr td:nth-of-type(2) p {
-        margin: 0.5rem 0;
+        margin: 8px 0;
     }
     .shoppingcart table tbody tr td img.t-shirt {
-        width: 4rem;
+        width: 64px;
         position: relative;
         top: inherit;
         left: inherit;
@@ -807,33 +817,33 @@ main section a {
     }
 }
 
-@media only screen and (min-width: 48rem) {
+@media only screen and (min-width: 768px) {
     .shoppingcart table {
-        padding: 1rem 1.5rem;
+        padding: 16px 24px;
         border-collapse: collapse;
     }
     .shoppingcart table thead tr th,
     .shoppingcart table tbody tr td {
-        padding: 0.5rem;
-        border-right: 0.125rem solid var(--light-blue);
+        padding: 8px;
+        border-right: 2px solid var(--light-blue);
     }
     .shoppingcart table tbody tr td {
-        border-top: 0.125rem solid var(--light-blue);
+        border-top: 2px solid var(--light-blue);
     }
     .shoppingcart table thead tr th:last-of-type,
     .shoppingcart table tbody tr td:last-of-type {
         border-right: none;
     }
     .shoppingcart table tbody tr td:first-of-type svg {
-        width: 14.25rem;
-        height: 14.25rem;
+        width: 228px;
+        height: 228px;
     }
     .shoppingcart table tbody tr td:first-of-type img {
         width: 30%;
     }
     .shoppingcart table tbody tr td:first-of-type p {
         top: 29%;
-        font-size: 1rem;
+        font-size: 16px;
     }
     .shoppingcart table + p {
         text-align: center;
@@ -852,7 +862,7 @@ main section a {
     align-items: center;
 }
 .order form {
-    max-width: 300px;
+    max-width: 18.75rem;
     width: 100%;
     margin: 0 auto;
 
@@ -871,7 +881,7 @@ main section a {
 .order form select {
     padding: 0.5em;
     border: none;
-    border-radius: 4.8px;
+    border-radius: .3rem;
 
     font-family: 'Mulish-Regular', sans-serif;
     font-weight: 400;
@@ -882,16 +892,32 @@ main section a {
 }
 
 .order form button {
-    margin-top: 16px;
-    padding: 12.8px;
+    margin-top: 1rem;
+    padding: .8rem;
+}
+
+.order form input.error,
+.order form select.error {
+    border: 0.11rem solid red;
+    background-color: #fde7e7;
+}
+
+.order form input:valid,
+.order form select:valid {
+    border: 0.11rem solid #adff2f;
+    background-color: #f7ffeb;
+}
+
+.order form input.error + p {
+    margin: 0.5rem 0;
 }
 
 
 /* Confirmation */
 .confirmation section {
-    max-width: 20.625rem;
+    max-width: 330px;
     height: auto;
-    margin: 5rem auto;
+    margin: 80px auto;
 
     grid-template-rows: repeat(3, min-content);
     place-items: flex-start;
@@ -902,13 +928,13 @@ main section a {
 }
 
 .confirmation section a {
-    margin-top: 16px;
+    margin-top: 1rem;
 
     font-family: 'Mulish-Regular', sans-serif;
     font-weight: 400;
 }
 
-@media only screen and (min-width: 48rem) {
+@media only screen and (min-width: 768px) {
     .confirmation {
         display: flex;
         justify-content: center;
@@ -934,7 +960,7 @@ main section a {
 
 @supports selector(:has(*)) {
     .design ul li:has(label:first-of-type input:checked) {
-        border-radius: 8px;
+        border-radius: .5rem;
         background-color: var(--orange);
     }
     
@@ -944,8 +970,8 @@ main section a {
     
     .design ul li:has(label:first-of-type input:checked) label:last-of-type {
         width: 100%;
-        padding: 24px 0 32px;
-        border-radius: 8px 8px 0 0;
+        padding: 1.5rem 0 2rem;
+        border-radius: .5rem .5rem 0 0;
     
         display: block;
     
@@ -956,26 +982,26 @@ main section a {
     
         background-color: var(--light-blue);
     
-        font-size: 16px;
+        font-size: 1rem;
     }
     
     .design ul li:has(label:first-of-type input:checked) label:last-of-type span:first-of-type {
-        padding: 0 16px;
-        margin-bottom: 8px;
+        padding: 0 1rem;
+        margin-bottom: .5rem;
     
         display: block;
     
-        font-size: 16px;
+        font-size: 1rem;
         color: var(--dark-blue);
     }
 
     .design ul li:has(label:first-of-type input:checked) label:last-of-type input {
-        padding: 0 16px;
+        padding: 0 1rem;
     
         color: var(--dark-blue);
     }
 
-    @media only screen and (min-width: 48rem) {
+    @media only screen and (min-width: 768px) {
         .design ul li:has(label:first-of-type input:checked) {
             background-color: transparent;
         }
@@ -985,7 +1011,7 @@ main section a {
         }
 
         .design ul li:has(label:first-of-type input:checked) label:last-of-type {
-            padding: 0.5rem 0;
+            padding: 8px 0;
             
             position: relative;
             bottom: inherit;
@@ -994,9 +1020,9 @@ main section a {
         }
 
         .design ul li label:nth-of-type(2) span {
-            margin: 0.5rem 0;
+            margin: 8px 0;
             display: block;
-            font-size: 1rem;
+            font-size: 16px;
             color: var(--dark-blue);
         }
 
@@ -1008,5 +1034,17 @@ main section a {
         .design ul li label:nth-of-type(2) #color {
             margin: 0;
         }
+    }
+}
+
+@media not all and (min-resolution:.001dpcm) { 
+    header nav { 
+        padding: .5rem 2.875rem .5rem 1rem;
+    }
+}
+
+@supports (-webkit-hyphens:none){ 
+    header nav { 
+        padding: .5rem 2.875rem .5rem 1rem;
     }
 }
