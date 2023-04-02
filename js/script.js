@@ -50,9 +50,6 @@ if (window.localStorage) {
             console.log(userAccount);
 
             // console.log('order exists: ' + orderExists);
-
-            // TODO: loop through orders
-            // userAccount.orders ={}
             console.log('LOOP THRU ORDERS!!!');
 
             let orders = userAccount.orders;
@@ -355,7 +352,7 @@ if (window.localStorage) {
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                                 <path d="M15 4l6 2v5h-3v8a1 1 0 0 1 -1 1h-10a1 1 0 0 1 -1 -1v-8h-3v-5l6 -2a3 3 0 0 0 6 0" />
                             </svg>
-                            <img src="${order.image}" alt="T-shirt">
+                            <img src="${order.image}" alt="uploaded image on T-shirt">
                             <p>${order.text}</p>
                         </div>
                     </td>
@@ -433,8 +430,116 @@ if (window.localStorage) {
             }
             break;
         case '/order.html':
-                //Do something
-                break;
+            console.log('order page');
+            // Of email correct is of niet
+            // Source https://codepen.io/FlorinPop17/pen/OJJKQeK
+            function isEmail(email) {
+                return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+            }
+            const form = document.querySelector('.order form');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            form.setAttribute('novalidate', true);
+
+            form.addEventListener('submit', (e) => {
+                let errors = 0;
+            console.log('form submitted');
+                // Check firstname field
+                const firstNameInput = document.querySelector('#firstname');
+                if (firstNameInput.value.trim().length === 0) {
+                    errors++;
+                    firstNameInput.classList.add('error');
+                    firstNameInput.insertAdjacentHTML('afterend', '<p>Please enter a first name</p>');
+                } else {
+                    firstNameInput.classList.remove('error');
+                }
+
+                // Check lastname field
+                const lastNameInput = document.querySelector('#lastname');
+                if (lastNameInput.value.trim().length === 0) {
+                    errors++;
+                    lastNameInput.classList.add('error');
+                    lastNameInput.insertAdjacentHTML('afterend', '<p>Please enter a last name</p>');
+                } else {
+                    lastNameInput.classList.remove('error');
+                }
+
+                // Check email field
+                const emailInput = document.querySelector('#email');
+                if (!emailRegex.test(emailInput.value) && emailInput.value.trim().length === 0) {
+                    errors++;
+                    emailInput.classList.add('error');
+                    emailInput.insertAdjacentHTML('afterend', '<p>Please enter a valid email address</p>');
+                } else {
+                    emailInput.classList.remove('error');
+                }
+
+                // Check address field
+                const addressInput = document.querySelector('#address');
+                if (addressInput.value.trim().length === 0) {
+                    errors++;
+                    addressInput.classList.add('error');
+                    addressInput.insertAdjacentHTML('afterend', '<p>Please enter an address</p>');
+                } else {
+                    addressInput.classList.remove('error');
+                }
+
+                // Check city field
+                const cityInput = document.querySelector('#city');
+                if (cityInput.value.trim().length === 0) {
+                    errors++;
+                    cityInput.classList.add('error');
+                    cityInput.insertAdjacentHTML('afterend', '<p>Please enter a city</p>');
+                } else {
+                    cityInput.classList.remove('error');
+                }
+
+                // Check country field
+                const countryInput = document.querySelector('#country');
+                if (countryInput.value.trim().length === 0) {
+                    errors++;
+                    countryInput.classList.add('error');
+                    countryInput.insertAdjacentHTML('afterend', '<p>Please enter a country</p>');
+                } else {
+                    countryInput.classList.remove('error');
+                }
+
+                // Check postalCode field
+                const postalCodeInput = document.querySelector('#postalCode');
+                if (postalCodeInput.value.trim().length !== 6) {
+                    errors++;
+                    postalCodeInput.classList.add('error');
+                    postalCodeInput.insertAdjacentHTML('afterend', '<p>Please enter a postal code that is 6 characters long</p>');
+                } else {
+                    postalCodeInput.classList.remove('error');
+                }
+
+                // Check phone field
+                const phoneInput = document.querySelector('#phone');
+                if (phoneInput.value.trim().length === 0) {
+                    errors++;
+                    phoneInput.classList.add('error');
+                    phoneInput.insertAdjacentHTML('afterend', '<p>Please enter a phone number</p>');
+                } else {
+                    phoneInput.classList.remove('error');
+                }
+
+                // Check payment field
+                const paymentInput = document.querySelector('#payment');
+                if (paymentInput.value.trim().length === 0) {
+                    errors++;
+                    paymentInput.classList.add('error');
+                    paymentInput.insertAdjacentHTML('afterend', '<p>Please enter a payment method</p>');
+                } else {
+                    paymentInput.classList.remove('error');
+                }
+
+                // If there are errors, prevent form submission
+                if (errors > 0) {
+                    e.preventDefault();
+                }
+            });
+            break;
         case '/order-confirmation.html':
             //Do something
             break;
@@ -462,3 +567,4 @@ if (path == '/design.html' || path == '/winkelwagen.html') {
     const a = document.querySelector('a.back');
     a.href = `javascript: history.go(-1)`;
 }
+
