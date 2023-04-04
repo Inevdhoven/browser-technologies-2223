@@ -403,8 +403,8 @@ main section a {
     color: var(--black);
 }
 
-.choose-size section input:checked + label:focus,
-.choose-size section input:focus {
+.choose-size section input:checked + label:focus-visible,
+.choose-size section input:focus-visible {
     width: 3.5rem;
     height: 2rem;
     outline: 0.125rem solid var(--light-blue);
