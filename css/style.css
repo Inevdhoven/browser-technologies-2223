@@ -470,7 +470,8 @@ main section a {
     color: var(--black);
 }
 
-.design ul li label:nth-of-type(2) {
+.design ul li label:nth-of-type(2),
+.design ul li label[for="image"] + input {
     display: none;
 }
 
@@ -988,7 +989,8 @@ main section a {
         stroke: var(--white);
     }
     
-    .design ul li:has(label:first-of-type input:checked) label:last-of-type {
+    .design ul li:has(label:first-of-type input:checked) label:last-of-type,
+    .design ul li:has(label:first-of-type input:checked) label[for="image"] + input {
         width: 100%;
         padding: 1.5rem 0 2rem;
         border-radius: .5rem .5rem 0 0;
