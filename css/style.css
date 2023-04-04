@@ -73,7 +73,8 @@ a:not(header a),
 .choose-size form button,
 .design ul li label:last-of-type button,
 .design ul li label:last-of-type span:nth-of-type(2),
-.order button {
+.order button,
+.design ul li:first-of-type input[type="file"]::-webkit-file-upload-button {
     padding: .5rem .8rem;
     border: none;
     border-radius: .5rem;
@@ -95,7 +96,8 @@ a:not(header a):hover,
 .choose-size form button:hover,
 .design ul li label:last-of-type button:hover,
 .design ul li label:last-of-type span:nth-of-type(2):hover,
-.order button:hover {
+.order button:hover,
+.design ul li:first-of-type input[type="file"]::-webkit-file-upload-button:hover {
     background-color: hsl(19, 84%, 50%);
     cursor: pointer;
 }
@@ -123,6 +125,10 @@ header a h1 {
     font-weight: 900;
     font-size: 1.5rem;
     color: var(--white);
+}
+
+header a span {
+    font-size: 0;
 }
 
 header nav a:last-of-type {
@@ -397,6 +403,13 @@ main section a {
     color: var(--black);
 }
 
+.choose-size section input:checked + label:focus,
+.choose-size section input:focus {
+    width: 3.5rem;
+    height: 2rem;
+    outline: 0.125rem solid var(--light-blue);
+}
+
 .choose-size section label {
     padding: .5rem .8rem;
     
@@ -500,9 +513,16 @@ main section a {
     font-size: 1rem;
 }
 
-.design ul li:first-of-type label:last-of-type input {
-    display: none;
-} 
+.design ul li:first-of-type label[for="image"] {
+    padding: 0.5rem 0.5rem;
+}
+
+.design ul li:first-of-type input[type="file"]  {
+    padding-right: 1.25rem;
+    font-family: 'Mulish-Regular', sans-serif;
+    font-weight: 400;
+    color: var(--dark-blue);
+}
 
 .design ul li label:last-of-type button {
     margin: 0 1rem 0;
