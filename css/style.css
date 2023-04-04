@@ -515,7 +515,7 @@ main section a {
 }
 
 .design ul li:first-of-type label[for="image"] {
-    padding: 0.5rem 0.5rem;
+    padding: 0;
 }
 
 .design ul li:first-of-type input[type="file"]  {
@@ -660,7 +660,8 @@ main section a {
     .design ul li label:first-of-type {
         padding: 16px;
     }
-    .design ul li label:nth-of-type(2) {
+    .design ul li label:nth-of-type(2),
+    .design ul li label[for="image"] + input {
         padding: 8px 16px;
         display: block;
     }
