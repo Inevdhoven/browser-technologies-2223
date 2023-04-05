@@ -6,7 +6,7 @@ Deze website heb ik gemaakt voor het vak Browser Technologies gedurende de minor
 
 Je kunt de demo van mijn website [hier](https://inevdhoven.github.io/browser-technologies-2223/) vinden.
 
-Voor meer over mijn proces en de bronnen die ik heb gebruikt kun je mijn Notion bekijken [hier](https://smooth-freeze-4ae.notion.site/Browser-Technologies-c007bb643c594744963b512dc8793039).
+![Afbeelding van Design your t-shirt](images/design-your-t-shirt.png)
 
 ## Table of Contents
 
@@ -210,6 +210,7 @@ Op de pagina waar je het t-shirt kan ontwerpen, kwam ik erachter dat de knop upl
 | Screenreader test                                 | :white_check_mark: |
 | Readme schrijven                                  | :white_check_mark: |
 | Serverside uitleg schrijven                       | :white_check_mark: |
+| GitHub Pages localsotrage fixen                   |                    |
 | Tekst kleur ook kunnen laten aanpassen            |                    |
 | :has() mobiel Firefox en Flow oplossen            |                    |
 
