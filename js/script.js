@@ -22,13 +22,14 @@ console.log(id);
 
 const keyName = "shirtUserAccount";
 
-if (supports_html5_storage()) {
+function paths() {
+    console.log('testtest');
     switch (path) {
         case '/':
-            
+            console.log('path: ' + path);
             break;
         case '/overview.html':
-            
+            console.log('path: ' + path);
             // let userAccount;
             if (localStorage.getItem(keyName)) {
                 userAccount = JSON.parse(localStorage.getItem(keyName));
@@ -48,9 +49,6 @@ if (supports_html5_storage()) {
 
             console.log('user orders:');
             console.log(userAccount);
-
-            // console.log('order exists: ' + orderExists);
-            console.log('LOOP THRU ORDERS!!!');
 
             let orders = userAccount.orders;
             const items = document.querySelector('.overview ul');
@@ -117,6 +115,7 @@ if (supports_html5_storage()) {
             // }
             break;
         case '/choose-size.html':
+            console.log('path: ' + path);
             const currentOrderId = window.location.hash.replace('#id=', '');
             console.log('editing order: ', currentOrderId);
 
@@ -568,19 +567,20 @@ if (supports_html5_storage()) {
 // SOURCE: https://stackoverflow.com/questions/32902659/detect-if-browser-allows-setting-localstorage-setitem
 function supports_html5_storage() {
     try {
-      if ('localStorage' in window && window['localStorage'] !== null)
-          {
-            localStorage.setItem("testitem",true);
-            localStorage.removeItem("testitem");
+        if ('localStorage' in window && window['localStorage'] !== null) {
+            console.log('localstorage is supported')
+            paths();
             return true;
-          }
+        }
     } catch (e) {
-      return false;
+        console.log('localstorage is not supported')
+        return false;
     }
-  }
+}
 
 if (path == '/design.html' || path == '/winkelwagen.html') {
     const a = document.querySelector('a.back');
     a.href = `javascript: history.go(-1)`;
 }
 
+supports_html5_storage()
