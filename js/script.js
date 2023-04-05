@@ -22,7 +22,7 @@ console.log(id);
 
 const keyName = "shirtUserAccount";
 
-if (window.localStorage) {
+if (supports_html5_storage()) {
     switch (path) {
         case '/':
             
@@ -564,6 +564,20 @@ if (window.localStorage) {
         return true;
     }
 }
+
+// SOURCE: https://stackoverflow.com/questions/32902659/detect-if-browser-allows-setting-localstorage-setitem
+function supports_html5_storage() {
+    try {
+      if ('localStorage' in window && window['localStorage'] !== null)
+          {
+            localStorage.setItem("testitem",true);
+            localStorage.removeItem("testitem");
+            return true;
+          }
+    } catch (e) {
+      return false;
+    }
+  }
 
 if (path == '/design.html' || path == '/winkelwagen.html') {
     const a = document.querySelector('a.back');
